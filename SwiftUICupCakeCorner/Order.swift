@@ -22,5 +22,17 @@ class Order: ObservableObject {
         }
     }
     @Published var extraFrosting = false
-    @Published var addSprinkles = false  
+    @Published var addSprinkles = false
+    
+    @Published var name = ""
+    @Published var streetAdress = ""
+    @Published var city = ""
+    @Published var zip = ""
+    
+    var hasValidAddress: Bool {
+        if name.isEmpty || streetAdress.isEmpty || city.isEmpty || zip.isEmpty {
+            return false
+        }
+        return true
+    }
 }
