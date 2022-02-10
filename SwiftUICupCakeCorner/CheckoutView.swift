@@ -33,5 +33,6 @@ struct CheckoutView: View {
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
         CheckoutView(order: Order())
+            .previewLayout(.sizeThatFits)
     }
 }
